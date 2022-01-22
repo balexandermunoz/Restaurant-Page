@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.content {
+    /* this is needed or the background will be offset by a few pixels at the top */
+    overflow: auto;
+    position: relative;
+  }
+  
+  .content::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  
+    display: block;
+    background-image: url('images/backgroundv3.png');
+    background-position: right center; /* First value is from left and second is from top. You can use use number as well*/
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: saturate(150%) blur(2px);
+  }
+
+header {
+    background-color: rgba(95, 158, 160, 0.521);
+    padding: 0em 0 1em 0;
+    width: 100vw;
+}
+
+.title { 
+    margin: 10px;
+    font-family: 'Neonderthaw', cursive;
+    color:rgba(0, 0, 0, 0.621);
+    font-size: 50px;
+}
+
+.tab { /* For each tab. For a specific tab the clas is .tabs-'name' */
+    padding: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Dongle', sans-serif;
+    color: black;
+}
+
+.tab:hover {
+    color: blueviolet;
+    cursor: pointer;
+}
+
+main {
+    border-radius: 40px;
+    padding: 20px;
+    background-color: rgba(95, 158, 160, 0.315);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 700px;
+    min-width: 250px;
+    margin: 20px;
+    display: flex;
+    flex: 1;
+}
+
+p { 
+    font-family: 'Dongle', sans-serif;
+    font-size: 30px;
+}
+
+.cakes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cake {
+    width: 250px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(65, 105, 225, 0.74);
+}
+
+.cake:hover {
+    cursor: pointer;
+    background-color: royalblue;
+}
+
+.img {
+    text-align: center;
+    width: 250px;
+    border-radius: 100%;
+}
+
+.scroll-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+}
+
+.img-home {
+    position: absolute;
+}
+
+.img-map {
+    border-radius: 10px;
+    width: 80vw;
+    max-width: 600px;
+}
+
+footer {
+    background: #13141b1f;
+    width: 100vw;
+    font-family: 'Neonderthaw', cursive;
+    color: rgba(0, 0, 0, 0.83);
+}
+
+footer h4 {
+    margin: 2px;
+}
+
+/* Style all social media icons */
+.fa {
+    padding: 6px;
+    margin: 0 3px 0 3px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-github{
+    background: gray;
+    color: white;
+  }
